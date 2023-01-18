@@ -1,4 +1,4 @@
-export const data = [
+export const question = [
   {
     question: "Quem foi o quadrinista responsável pela criação da Liga da Justiça?",
     options: [
