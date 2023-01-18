@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useReducer } from 'react';
 import { question } from '../data/questions';
 
-type Action = | { type: 'CHANGE_STATE'}
+type Action = | { type: 'CHANGE_STATE'};
 
 type ElementChildren = {
     children: ReactNode;
@@ -18,7 +18,10 @@ function quizReducer(state: any, action: Action){
     console.log(state, action);
     switch(action.type){
         case "CHANGE_STATE":
-            return state;
+            return {
+                ...state,
+                gameStage: STAGES[1],
+            };
         default:
             return state;
     }
