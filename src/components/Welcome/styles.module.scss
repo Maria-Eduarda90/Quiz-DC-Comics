@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    img {
+        width: 20rem;
+        animation: float 2s ease-in-out infinite;
+        filter: drop-shadow(5px 5px 5px #1baac7);
+    }
+
+    @keyframes float{
+	    0%,100%{
+		    transform:translatey(0)
+        }
+        50%{
+            transform:translatey(-30px)
+        }
+    }   
+
+    button {
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem 2rem;
+        font-size: 18px;
+        cursor: pointer;
+        background: linear-gradient(90deg, #1baac7 0%, #0f5765 100%);
+        color: #fff;
+        transition: 0.3s;
+
+        &:hover {
+            background: linear-gradient(90deg, #0f5765 0%, #1baac7 100%);
+        }
+    }
+}
