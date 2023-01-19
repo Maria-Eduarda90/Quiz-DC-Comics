@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    
+    .questions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+        background-color: #0f5765;
+        width: 35rem;
+        border-radius: 8px;
+        padding: 1rem 2rem;
+
+        p {
+            color: #b0b1b1;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        button {
+            border: 2px solid #fff;
+            border-radius: 8px;
+            padding: 0.5rem 2rem;
+            font-size: 18px;
+            cursor: pointer;
+            background: linear-gradient(90deg, #1baac7 0%, #0f5765 100%);
+            color: #fff;
+            transition: 0.3s;
+
+            &:hover {
+                background: linear-gradient(90deg, #0f5765 0%, #1baac7 100%);
+            }
+        }
+    }
+}
+
