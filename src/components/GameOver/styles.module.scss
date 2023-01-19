@@ -1,0 +1,31 @@
+.done {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+
+    h2 {
+        color: #1baac7;
+    }
+
+    img {
+        width: 20rem;
+        filter: drop-shadow(5px 5px 5px #1baac7);
+    }
+
+    button {
+        border: 0;
+        border-radius: 8px;
+        padding: 0.5rem 2rem;
+        font-size: 18px;
+        cursor: pointer;
+        background: linear-gradient(90deg, #1baac7 0%, #0f5765 100%);
+        color: #fff;
+        transition: 0.3s;
+        margin-top: 0.5rem;
+
+        &:hover {
+            background: linear-gradient(90deg, #0f5765 0%, #1baac7 100%);
+        }
+    }
+}
