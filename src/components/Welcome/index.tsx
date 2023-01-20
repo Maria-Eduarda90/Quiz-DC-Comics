@@ -4,8 +4,7 @@ import { useQuiz } from '../../hook/useQuiz';
 
 export function Welcome(){
     const [quizState, dispatch] = useQuiz();
-    
-    console.log(quizState);
+
     return(
         <div className={styles.container}>
             <h1>Seja bem vindo!</h1>
