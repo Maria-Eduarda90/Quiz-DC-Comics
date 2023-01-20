@@ -1,7 +1,13 @@
 import { createContext, ReactNode, useReducer } from 'react';
 import { question } from '../data/questions';
 
-type Action = | { type: 'CHANGE_STATE' } | { type: 'REORDER_QUESTIONS' } | { type: 'CHANGE_QUESTION' } | { type: 'NEW_GAME'};
+type questionType = {
+    question: string;
+    option: string;
+    answer: string;
+}
+
+type Action = | { type: 'CHANGE_STATE' } | { type: 'REORDER_QUESTIONS' } | { type: 'CHANGE_QUESTION' } | { type: 'NEW_GAME' } | { type: 'CHECK_ANSWER', payload: questionType };
 
 type ElementChildren = {
     children: ReactNode;
@@ -14,10 +20,10 @@ const initialState = {
     question,
     currentQuestion: 0,
     score: 0,
+    answerSelected: false,
 };
 
 function quizReducer(state: any, action: Action){
-    console.log(state, action);
     switch(action.type){
         case "CHANGE_STATE":
             return {
@@ -46,10 +52,26 @@ function quizReducer(state: any, action: Action){
                 ...state,
                 currentQuestion: nextQuestion,
                 gameStage: endGame ? STAGES[2] : state.gameStage,
+                answerSelected: false,
             };
 
         case "NEW_GAME":
             return initialState;
+
+        case "CHECK_ANSWER":
+            if(state.answerSelected) return state;
+
+            const answer = action.payload.answer;
+            const option = action.payload.option;
+            let correctAnswer = 0;
+
+            if (answer === option) correctAnswer = 1;
+
+            return {
+                ...state,
+                score: state.score + correctAnswer,
+                answerSelected: option
+            }
         
         default:
             return state;
