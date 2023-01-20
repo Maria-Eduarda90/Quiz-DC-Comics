@@ -2,10 +2,10 @@ export const question = [
   {
     question: "Quem foi o quadrinista responsável pela criação da Liga da Justiça?",
     options: [
-        "Will Jacobs", 
-        "Robert Kanigher", 
-        "Gardner Fox", 
-        "Joe Kubert"
+      "Will Jacobs", 
+      "Robert Kanigher", 
+      "Gardner Fox", 
+      "Joe Kubert"
     ],
     answer: "Gardner Fox",
   },
