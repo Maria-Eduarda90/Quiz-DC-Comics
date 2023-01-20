@@ -50,14 +50,14 @@ export const question = [
     answer: "O Santuário Secreto",
   },
   {
-    question: "Qual das bases secretas da Liga da Justiça também foi usada pela Justiça Jovem?",
+    question: "Quem é o causador da Crise nas Infinitas Terras?",
     options: [
-      "O Santuário Secreto",
-      "O Satélite",
-      "O Bunker",
-      "A Torre de Vigilância",
+      "Monitor",
+      "Anti-Monitor",
+      "Darkseid",
+      "Superboy-Prime",
     ],
-    answer: "O Santuário Secreto",
+    answer: "Anti-Monitor",
   },
   {
     question: "Qual personagem clássico da equipe nos quadrinhos não faz parte da formação oficial dos heróis no desenho animado da Liga da Justiça??",
