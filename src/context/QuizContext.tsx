@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useReducer } from 'react';
 import { question } from '../data/questions';
 
-type Action = | { type: 'CHANGE_STATE' } | { type: 'REORDER_QUESTIONS' } | { type: 'CHANGE_QUESTION' };
+type Action = | { type: 'CHANGE_STATE' } | { type: 'REORDER_QUESTIONS' } | { type: 'CHANGE_QUESTION' } | { type: 'NEW_GAME'};
 
 type ElementChildren = {
     children: ReactNode;
@@ -13,6 +13,7 @@ const initialState = {
     gameStage: STAGES[0],
     question,
     currentQuestion: 0,
+    score: 0,
 };
 
 function quizReducer(state: any, action: Action){
@@ -47,6 +48,9 @@ function quizReducer(state: any, action: Action){
                 gameStage: endGame ? STAGES[2] : state.gameStage,
             };
 
+        case "NEW_GAME":
+            return initialState;
+        
         default:
             return state;
     }

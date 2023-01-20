@@ -9,10 +9,10 @@ export function GameOver(){
     return(
         <div className={styles.done}>
             <h2>Fim de jogo!</h2>
-            <p>Pontuação: x</p>
-            <p>Você acertou y de z perguntas</p>
+            <p>Pontuação: {quizState.score}</p>
+            <p>Você acertou {quizState.score} de {quizState.question.length} perguntas</p>
             <img src={ImgDone} alt="Fim do quiz" />
-            <button>Reiniciar</button>
+            <button onClick={() => dispatch({ type: "NEW_GAME" })}>Reiniciar</button>
         </div>
     );
 }
