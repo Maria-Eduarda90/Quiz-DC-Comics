@@ -1,7 +1,7 @@
 type OprionType = {
     option: string;
     answer: string;
-    selectOption: () => any;
+    selectOption: () => void;
 }
 
 export function Option({ option, answer, selectOption }: OprionType){
